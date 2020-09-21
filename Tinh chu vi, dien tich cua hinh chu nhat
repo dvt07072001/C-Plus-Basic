@@ -1,0 +1,37 @@
+#include<iostream>//	Bai02: Tinh chu vi, dien tich cua hinh chu nhat
+using namespace std;
+void chuViDienTich(int a, int b, int &chuVi, int &dienTich)
+{
+	chuVi = (a + b) * 2;
+	dienTich = a * b;
+}
+int main()
+{
+	int a, b,chuVi,dienTich;
+	do
+	{
+		cout << "Nhap vao chieu dai a: ";
+		cin >> a;
+		if (a <= 0)
+		{
+			cout << "Chieu dai khong hop le, yeu cau nhap vao chieu dai lon hon 0" << endl;
+		}
+	} while (a <= 0);
+
+	do
+	{
+		cout << "Nhap vao rong b: ";
+		cin >> b;
+		if (b <= 0)
+		{
+			cout << "Chieu dai khong hop le, yeu cau nhap vao chieu dai lon hon 0" << endl;
+		}
+	} while (b <= 0);
+	
+	chuViDienTich(a, b , chuVi, dienTich);
+	cout << "Chu vi cua hinh chu nhat la: " << chuVi << endl;
+	cout << "Dien tich cua hinh chu nhat la : " << dienTich << endl;
+
+	system("pause");
+	return 0;
+}
