@@ -1,0 +1,22 @@
+#include<iostream>	//BAI09: Kiem tra so nguyen duong.
+using namespace std;
+
+int main()
+{
+	int n;
+
+	cout << "\nNhap so nguyen n: ";
+	cin >> n;
+
+	if (n > 0)
+	{
+		cout << n <<" La so nguyen duong. "<<endl;
+	}
+	else
+	{
+		cout << n  <<" Khong phai la so nguyen duong. "<<endl;
+	}
+
+	system("pause");
+	return 0;
+}
