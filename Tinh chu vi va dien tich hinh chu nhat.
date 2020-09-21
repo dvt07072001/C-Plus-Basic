@@ -1,0 +1,40 @@
+#include<iostream>	//BAI06: Tinh chu vi va dien tich hinh chu nhat.
+#include<iomanip>
+using namespace std;
+int main()
+{
+	int chieuDai, chieuRong;
+	float chuVi, dienTich;
+
+	do
+	{
+		cout << "Nhap vao chieu dai cua hinh chu nhat: ";
+		cin >> chieuDai;
+		if (chieuDai <= 0)
+		{
+			cout << "Chieu dai khong ho le, yeu cau nhap lai so lon hon 0." << endl;;
+		}
+	}
+	while (chieuDai <= 0 );
+	do
+	{
+		cout << "Nhap vao chieu rong cua hinh chu nhat: ";
+		cin >> chieuRong;
+		if (chieuRong <= 0)
+		{
+			cout << "So nguyen không hop le, yeu cau nhap lai so lon hon 0." << endl;
+		}
+	}
+	while (chieuRong <= 0);
+
+	chuVi = (chieuDai + chieuRong) * 2;
+	dienTich = float(chieuDai) * float(chieuRong);
+
+	cout << setfill('_');
+	cout << setw(50) << "_" << endl;
+	cout << "Chu vi cua hinh chu nhat la: " << chuVi << endl;
+	cout << "Dien tich cua hinh chu nhat la: " << dienTich << endl;
+
+	system("pause");
+	return 0;
+}
