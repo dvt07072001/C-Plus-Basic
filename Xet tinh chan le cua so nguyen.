@@ -1,0 +1,30 @@
+#include<iostream>	//BAI08: Xet tinh chan le cua so nguyen.
+using namespace std;
+
+int main()
+{
+	int n;
+
+	do
+	{
+		cout << "Nhap vao so nguyen n: ";
+		cin >> n;
+		if (n == 0)
+		{
+			cout << "So nguyen khong hop le, yeu cau nhap vao so nguyen khac 0" << endl;
+		}
+	} 
+	while (n == 0);
+		if ((n % 2) == 0)
+		{
+			cout << n<<" la so chan "<<endl;
+		}
+
+		else
+		{
+			cout << n << " la so le "<<endl;
+		}
+
+	system("pause");
+	return 0;
+}
