@@ -1,0 +1,64 @@
+#include<iostream>	//BAI06: Giai phuong trinh bac 2.
+#include<math.h>
+using namespace std;
+int main()
+{
+	int a, b, c;
+	float x,x1,x2,denta;
+	cout << "Nhap vao so nguyen a: ";
+	cin >> a;
+	cout << "Nhap vao so nguyen b: ";
+	cin >> b;
+	cout << "Nhap vao so nguyen c: ";
+	cin >> c;
+	denta = float(b) * b - (4 * float(a) * c);
+	if (a == 0)	//PHuong trinh bac nhat.
+	{
+		
+		if (b == 0 & c == 0)
+		{
+			cout << "Phuong trinh vo so nghiem.";
+			system("pause");
+			return 0;
+		}
+		if (b == 0 & c != 0)
+		{
+			cout << "Phuong trinh vo nghiem.";
+			system("pause");
+			return 0;
+		}
+		else
+		{
+			if (b != 0 & c == 0)
+			{
+				cout << "Phuong trinh co nghiem la: "<<0;
+				return 0;
+			}
+			else
+			x = -float(c) / b;
+			cout << "Phuong trinh co nghiem la: " << x << endl;
+			system("pause");
+			return 0;
+		}
+	}
+	else
+		if (denta > 0)
+		{
+			x1 = (-b + sqrt(denta)) / (2 * float(a));
+			cout << "Phuong trinh con nghiem x1 la: " << x1 << endl;
+			x2 = (-b - sqrt(denta)) / (2 * float(a));
+			cout << "Phuong trinh co nghiem x2 la: " << x2 << endl;
+			system("pause");
+			return 0;
+		}
+	if (denta < 0)
+		cout << "Phuong trinh vo nghiem" << endl;
+	else
+	{
+		x = x1 = x2 = -b / (2 * float(a));
+		cout << "Phuong trinh co nghiem kep la: " << x << endl;
+	}
+	system("pause");
+	return 0;
+
+}
