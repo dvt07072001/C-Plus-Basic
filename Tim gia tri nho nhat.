@@ -1,0 +1,21 @@
+#include<iostream>	//BAI07: Tim gia tri nho nhat.
+using namespace std;
+int main()
+{
+	int a, b,min;
+
+	cout << "Nhap vao so nguyen a: ";
+	cin >> a;
+
+	cout << "Nhap vao so nguyen b: ";
+	cin >> b;
+	 
+	min = a;
+	if (min > b)
+	min = b;
+
+	cout << "Gia tri nho nhat la: " << min<<endl;
+
+	system("pause");
+	return 0;
+}
