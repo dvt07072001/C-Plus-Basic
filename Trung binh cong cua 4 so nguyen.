@@ -1,0 +1,26 @@
+#include<iostream>	//BAI10: Trung binh cong cua 4 so nguyen.
+using namespace std;
+int main()
+{
+	int a, b, c, d;
+	float trungBinhCong;
+
+	cout << "Nhap vao so nguyen a: ";
+	cin >> a;
+
+	cout << "Nhap vao so nguyen b: ";
+	cin >> b;
+
+	cout << "Nhp vao so nguyen c: ";
+	cin >> c;
+
+	cout << "Nhap vao so nguyen d: ";
+	cin >> d;
+
+	trungBinhCong = float((a + b + c + d)) / 4;
+
+	cout << "Trung binh cong cua 4 so nguyen " << a<<"," << b<<"," << c<<"," << d<<"," << "la: " << trungBinhCong << endl;
+
+	system("pause");
+	return 0;
+}
