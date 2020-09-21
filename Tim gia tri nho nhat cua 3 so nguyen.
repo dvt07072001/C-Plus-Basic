@@ -1,0 +1,22 @@
+#include<iostream>	//BAI04: Tim gia tri nho nhat cua 3 so nguyen.
+using namespace std;
+int main()
+{
+	int a, b, c, max;
+	cout << "Nhap vao so nguyen a: ";
+	cin >> a;
+	cout << "Nhap vao so nguyen b: ";
+	cin >> b;
+	cout << "Nhap vao so nguyen c: ";
+	cin >> c;
+	{
+		max = a;
+		if (b > max)
+			max = b;
+		if (c > max)
+			max = c;
+	}
+	cout << "So nguyen nho nhat la: " <<max << "." << endl;
+	system("pause");
+	return 0;
+}
