@@ -1,0 +1,74 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main()
+{
+	int a, b, c;
+
+	do
+	{
+		cout << "Nhap vao so nguyen a: ";
+		cin >> a;
+		if (a <= 0)
+		{
+			cout << "So nguyen khong hop le, yeu cau nhpa voa so nguyen lon hon 0." << endl;
+		}
+	} while (a <= 0);
+
+	do
+	{
+		cout << "Nhap vao so nguyen b: ";
+		cin >> b;
+		if (b <= 0)
+		{
+
+			cout << "So nguyen khong hop le, yeu cau nhap voa so nguyen lon hon 0." << endl;
+		}
+	} while (b <= 0);
+
+	do
+	{
+		cout << "Nhap vao so nguyen c: ";
+		cin >> c;
+		if (c <= 0)
+		{
+			cout << "So nguyen khong hop le, yeu cau nhpa voa so nguyen lon hon 0." << endl;
+		}
+	} while (c <= 0);
+
+	if (a < b + c && b < a + c && c < a + b)
+	{
+		if (a == b && b==c)
+		{
+			cout << "Tam giac la tam giac deu." << endl;
+				return 0;
+		}
+		if ((a == b && a !=c ) || (a == c && a !=b)  || (b == c && b != a))
+		{
+			cout << "Tan giac la tam giac can." << endl;
+			return 0;
+		}
+		if (pow(a,2) == pow(b,2) + pow(c,2) || pow(b,2) == pow(a,2) + pow(c,2) || pow(c,2) == pow(a,2) + pow(b,2))
+		{
+			cout << "Tam giac la tam giac vuong." << endl;
+			return 0;
+		}
+		if ((pow(a, 2) == pow(b, 2) + pow(c, 2) || pow(b, 2) == pow(a, 2) + pow(c, 2) || pow(c, 2) == pow(a, 2) + pow(b, 2)) &&
+			(a == b && a != c) || (a == c && a != b) || (b == c && b != a))
+		{
+			cout << "Tam gia la tam giac vuong can." << endl;
+			return 0;
+		}
+		else
+		{
+			cout << "Tam giac la tam giac thuong." << endl;
+			return 0;
+		}
+	}
+	else
+	{
+		cout << "Ba canh tren khong lap thanh tam giac." << endl;
+	}
+	system("pause");
+	return 0;
+}
