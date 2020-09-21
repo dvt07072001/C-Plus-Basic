@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int n, giaiThua = 1;
+	do
+	{
+		cout << "Nhap vao so nguyen n: ";
+		cin >> n;
+		if (n < 0)
+		{
+			cout << "So nguyen khong hop le, yeu cau nhap lai so nguyen lon hon 0." << endl;
+		}
+	} while (n < 0);
+	for (int i = 1; i <= n; i++)
+	{
+		giaiThua = giaiThua * i;
+	}
+	cout << "Giai thua cua so nguyen " << n << " la: " << giaiThua<<endl;
+	system("pause");
+	return 0;
+}
