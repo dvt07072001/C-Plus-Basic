@@ -1,0 +1,67 @@
+#include<iostream>
+using namespace std;
+int  UCLN(int a, int b)
+{
+	for (int i = b; i > 0; i--)
+	{
+		if (a % i == 0 && b % i == 0)
+		{
+			return i;
+		}
+	}
+}
+void tinh(int a, int b, int c, int d, int &e, int &f)
+{
+	int m, n;
+	m = a * d;
+	n = b * c;
+	e =(m + n);
+	f = (b * d);
+}
+int main()
+{
+	int a, b, c, d,e,f;
+	cout << "Nhap vao so nguyen a: ";
+	cin >> a;
+
+	do
+	{
+		cout << "Nhap vao so nguyen b: ";
+		cin >> b;
+		if (b == 0)
+		{
+			cout << "So nguyen khong hop le, yeu cau nhap vao so nguyen khac 0" << endl;
+		}
+	} while (b == 0);
+
+	cout << "Nhap vao so nguyen c: ";
+	cin >> c;
+
+	do
+	{
+		cout << "Nhap vao so nguyen d: ";
+		cin >> d;
+		if (d == 0)
+		{
+			cout << "So nguyen khong hop le, yeu cau nhap vao so nguyen khac 0" << endl;
+		}
+	} while (d == 0);
+
+	tinh(a, b, c, d, e, f);
+	int m = UCLN(e, f);
+
+	int thuong1 = e / m;
+	int thuong2 = f / m;
+
+	if (e == f || thuong2==1)
+	{
+		cout <<"Ket qua cua phep toan: ( " << a << " / " << b <<  " ) + ( " << c << " / " << d << " ) = 1 "  << endl;
+	}
+	else
+	{
+		cout << "Ket qua cua phep toan: ( " << a << " / " << b << " ) + ( " << c << " / " << d << " ) = " << thuong1 << " / " <<thuong2 << endl;
+	}
+
+	system("pause");
+		return 0;
+}
