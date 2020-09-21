@@ -1,0 +1,27 @@
+#include<iostream>
+#include<math.h>;
+using namespace std;
+void chuViDienTich(float r, float& chuVi, float& dienTich)
+{
+	const float pi = 3.14;
+	chuVi = 2*(pi * r);
+	dienTich = pi * pow (r, 2);
+}
+int main()
+{
+	float r, chuVi, dienTich;
+	do
+	{
+		cout << "Nhap vao ban kinh cua hinh tron : ";
+		cin >> r;
+		if (r <= 0)
+		{
+			cout << "Ban kinh khong hop le, yeu cau nhap vao so lon hon 0." << endl;
+		}
+	} while (r <= 0);
+	chuViDienTich(r, chuVi, dienTich);
+	cout << "Chu vi cua hinh tron la: " << chuVi << endl;
+	cout << "Dien tich cua hinh tron la: " << dienTich << endl;
+	system("pause");
+	return 0;
+}
