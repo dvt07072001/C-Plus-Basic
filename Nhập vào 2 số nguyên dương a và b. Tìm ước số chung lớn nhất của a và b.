@@ -1,0 +1,41 @@
+#include<iostream>
+using namespace std;
+int  UCLN(int a, int b)
+{
+	for (int i = b; i > 0; i--)
+	{
+		if (a % i == 0 && b % i == 0)
+		{
+			return i;
+		}
+	}
+}
+int main()
+{
+	int a, b;
+	do
+	{
+		cout << "Nhap vao so nguyen a: ";
+		cin >> a;
+		if (a <= 0)
+		{
+			cout << "So nguyen khong hop le, yeu cau nhap vao so nguyen lon hon 0." << endl;
+		}
+	} while (a <= 0);
+
+	do
+	{
+		cout << "Nhap vao so nguyen b: ";
+		cin >> b;
+		if (b <= 0)
+		{
+			cout << "So nguyen khong hop le, yeu cau nhap vao so nguyen lon hon 0." << endl;
+		}
+	} while (b <= 0);
+
+	cout << "Uoc chung lon nhat cua hai so nguyen " << a<< " , " << b << " la: ";
+	cout << UCLN(a, b)<<endl;
+
+	system("pause");
+	return 0;
+}
