@@ -1,0 +1,26 @@
+#include<iostream>	//BAI03: Tong cac chu so cua so nguyen duong.
+#include<iomanip>
+using namespace std;
+int main()
+{
+	int n,hangChuc,hangDonVi,tong;
+
+	do
+	{
+		cout << "Nhap vao so nguyen n: ";
+		cin >> n;
+		if (n <=0 || n >= 100)
+			cout << "So nguyen khong hop le, yeu cau nhap vao so nguyen co hai chu so. "<<endl;
+	} while (n <= 0 || n >= 100);
+
+	cout<<setfill('_');
+	cout<<setw(50) << "_" << endl;
+	hangChuc = n / 10;
+	hangDonVi = n % 10;
+	tong = hangChuc + hangDonVi;
+
+	cout << "Tong cac chu so cua so nguyen n la: "<<tong<<endl;
+
+	system("pause");
+	return 0;
+}
