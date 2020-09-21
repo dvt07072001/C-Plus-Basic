@@ -1,0 +1,20 @@
+#include<iostream>	//BAI05: Giai phuong trinh bac nhat.
+using namespace std;
+int main()
+{
+	int a, b;
+	float x;
+	do
+	{
+		cout << "Nhap vao so nguyen a: ";
+		cin >> a;
+	} while (a == 0);
+	cout << "nhap vao so nguyen b: ";
+	cin >> b;
+	{
+		x = -float(b) / a;
+		cout << "Nghiem cua phuong trinh la: " << x << endl;
+	}
+	system("pause");
+	return 0;
+}
