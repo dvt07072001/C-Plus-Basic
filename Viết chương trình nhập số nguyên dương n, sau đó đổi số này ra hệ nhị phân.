@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+void doiCoSo(int n)
+{
+	int a[1000];
+	int i = 0;
+	while (n > 0)
+	{
+		a[i] = n % 2;
+		n = n / 2;
+		i++;
+	}
+	for (int j = i - 1; j >= 0; j--)
+	{
+		cout << a[j];
+	}
+}
+int main()
+{
+	int n;
+	do
+	{
+		cout << "Nhap vao so nguyen n: ";
+		cin >> n;
+		if (n <= 0)
+		{
+			cout << "Khong hop le, yeu cau nhap vao so nguyen lon hon 0." << endl;
+		}
+	} while (n <= 0);
+	cout << "He nhi phan cua so nguyen n la: ";
+	doiCoSo(n);
+	cout << endl;
+	system("pause");
+	return 0;
+}
