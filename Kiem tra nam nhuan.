@@ -1,0 +1,31 @@
+#include<iostream>	//Bai06: Kiem tra nam nhuan.
+using namespace std;
+int nam;
+bool namNhuan(int nam)
+{
+	if (nam % 4 == 0  || nam % 400 == 0 && nam % 100 != 0)
+		return true;
+		return false;
+}
+int main()
+{
+	do
+	{
+		cout << "Nhap vao nam: ";
+		cin >> nam;
+		if (nam <= 0)
+		{
+			cout << "Nam khong hop le, yeu cau nhap lai nam lon hon 0." << endl;
+		}
+	} while (nam <= 0);
+	if (namNhuan(nam) == true)
+	{
+		cout << "Nam " << nam << " la nam nhuan."<<endl;
+	}
+	else
+	{
+		cout << "Nam " << nam << " khong phai la nam nhuan."<<endl;
+	}
+	system("pause");
+	return 0;
+}
