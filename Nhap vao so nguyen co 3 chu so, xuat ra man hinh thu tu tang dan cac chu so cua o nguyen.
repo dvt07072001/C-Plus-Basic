@@ -1,0 +1,34 @@
+#include<iostream>	//Bai05: Nhap vao so nguyen co 3 chu so, xuat ra man hinh thu tu tang dan cac chu so cua o nguyen.
+using namespace std;
+int main()
+{
+	int n,hangTram,hangChuc,hangDonVi,bienPhu;
+	cout << "Nhap vao so nguyen n: ";
+	cin >> n;
+
+	hangTram = n / 100;
+	hangChuc = (n % 100) / 10;
+	hangDonVi = (n % 100) % 10;
+
+	if (hangTram > hangChuc)
+	{
+		bienPhu = hangTram;
+		hangTram = hangChuc;
+		hangChuc = bienPhu;
+	}
+	if (hangTram > hangDonVi)
+	{
+		bienPhu = hangTram;
+		hangTram = hangDonVi;
+		hangDonVi = bienPhu;
+	}
+	if (hangChuc > hangDonVi)
+	{
+		bienPhu = hangChuc;
+		hangChuc = hangDonVi;
+		hangDonVi = bienPhu;
+	}
+	cout << "Cac chu so cua so nguyen theo thu tu tang dan la: " << hangTram << " -> " << hangChuc << " -> " << hangDonVi << endl;
+	system("pause");
+	return 0;
+}
