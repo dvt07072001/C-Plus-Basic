@@ -1,0 +1,48 @@
+#include<iostream> //	Bai01: Tinh to hop, chinh hop
+using namespace std;
+int giaiThua(int n)
+{
+	int giaiThua = 1;
+	for (int i = 1; i <= n; i++)
+	{
+		giaiThua = giaiThua * i;
+	}
+	return giaiThua;
+}
+int main()
+{
+	int n, k;
+	int chinhHop, toHop;
+	do {
+		cout << "Nhap vao so nguyen n: ";
+		cin >> n;
+		if (n <= 0)
+		{
+			cout << "So nguyen khong hop le, yeu cau nhap vao so nguyen lon hon ." << endl;
+		}
+	} while (n <= 0);
+
+	do {
+		cout << "Nhap vao so nguyen k: ";
+		cin >> k;
+		if (k <= 0)
+		{
+			cout << "So nguyen khong hop le, yeu cau nhap vao so nguyen lon hon ." << endl;
+		}
+	} while (k <= 0);
+	
+	if (n >= k)
+	{
+		int m = (n - k);
+		toHop = (giaiThua(n)) / (giaiThua(m));
+		chinhHop = (giaiThua(n)) / (giaiThua(m) * giaiThua(k));
+		cout << "To hop la: " << toHop << endl;
+		cout << "Chinh hop la: " << chinhHop << endl;
+	}
+	else
+	{
+		cout << "Khong co ket qua hop le.";
+	}
+	system("pause");
+	return 0;
+}
