@@ -1,0 +1,26 @@
+#include<iostream>	//Bai10: Kiem tra so chinh phuong.
+using namespace std;
+int main()
+{
+	int n;
+	do
+	{
+		cout << "Nhap vao so nguyen n: ";
+		cin >> n;
+		if (n <= 0)
+		{
+			cout << "So nguyen khong hop le, yeu cau nhap lai so nguyen lon hon 0." << endl;
+		}
+	} while (n <= 0);
+	
+	if (sqrt(n) * sqrt(n) == n)
+	{
+		cout << "So nguyen " << n << " la so chinh phuong" << endl;
+	}
+	else
+	{
+		cout << "So nguyen " << n << " khong phai la so chinh phuong" << endl;
+	}
+	system("pause");
+	return 0;
+}
