@@ -1,0 +1,27 @@
+#include<iostream>	/*Bai06: Tong cac uoc so nho hon chinh no cua so nguyen.*/
+using namespace std;
+int main()
+{
+	int n, total = 1;
+	do
+	{
+		cout << "Nhap so nguyen duong n:\n";
+		cin >> n;
+		if (n <= 0)
+		{
+			cout << "Xin nhap lai n(n>0)!\n";
+		}
+	} while (n <= 0);
+	cout << "Tong cac uoc so le nho hon " << n << " la: 1";
+	for (int i = 2; i < n; i++)
+	{
+		if (n % i == 0)
+		{
+			total += i;
+			cout << "+" << i;
+		}
+	}
+	cout << "=" << total<<endl;
+	system("pause ");
+	return 0;
+}
