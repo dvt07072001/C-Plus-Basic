@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int n,max;
+	do
+	{
+		cout << "Nhap vao so nguyen duong n: ";
+		cin >> n;
+		if (n <= 0)
+		{
+			cout << "So nguyen khong hop le yeu, cau nhap vao so nguyen lon hon 0." << endl;
+		}
+	} while (n <= 0);
+	max = n % 10;
+	n /= 10;
+	while (n > 0)
+	{
+		int m =  n % 10;
+		if (m > max)
+		{
+			cout << "0";
+			return 0;
+		}
+		n = n / 10;
+	}
+	cout << "1";
+	system("pause");
+}
