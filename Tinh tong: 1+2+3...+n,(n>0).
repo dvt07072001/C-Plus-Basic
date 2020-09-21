@@ -1,0 +1,16 @@
+#include<iostream>	//BAI07: Tinh tong: 1+2+3...+n,(n>0).
+using namespace std;
+int main()
+{
+	int n, tong = 0;
+	do
+	{
+		cout << "Nhap vao so nguyen n: ";
+		cin >> n;
+	} while (n <= 0);
+	for (int i = 1; i <= n; i++)
+		tong = tong + i;
+	cout << "Tong cac so tu 1 den " << n << " la: " << tong << endl;
+	system("pause");
+	return 0;
+}
