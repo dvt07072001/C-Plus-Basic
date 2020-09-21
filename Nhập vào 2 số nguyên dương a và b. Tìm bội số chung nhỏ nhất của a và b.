@@ -1,0 +1,40 @@
+#include<iostream>
+using namespace std;
+int BCNN(int a, int b)
+{
+	for (int i = 1; i < a * b; i++)
+	{
+		if (i % a == 0 && i % b == 0)
+		{
+			return i;
+		}
+	}
+}
+int main()
+{
+	int a, b;
+	do
+	{
+		cout << "Nhap vao so nguyen a: ";
+		cin >> a;
+		if (a <= 0)
+		{
+			cout << "Khong hop le, yeu cau nhap vao so nguyen lon hon 0." << endl;
+		}
+	} while (a <= 0);
+
+	do
+	{
+		cout << "Nhap vao so nguyen b: ";
+		cin >> b;
+		if (b <= 0)
+		{
+			cout << "Khong hop le, yeu cau nhap vao so nguyen lon hon 0." << endl;
+		}
+	} while (b <= 0);
+	
+	cout << "Boi chung nho nhat cua hai so nguyen " << a << " , " << b<< " la: ";
+	cout << BCNN(a, b) << endl;
+	system("pause");
+	return 0;
+}
