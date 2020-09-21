@@ -1,0 +1,29 @@
+#include<iostream>	//Bai09: Tinh tien taxi 0<km<=1=17000,1<km<=30=15000,30>km=12000.
+using namespace std;
+int main()
+{
+	int km, tong1, tong2, tong, bienPhu;
+	cout << "Nhap vao so km can tinh: ";
+	cin >> km;
+
+	if (km > 30)
+	{
+		tong = 17000 + (29 * 15000) + (km - 30) * 12000;
+		cout << "Tong so tien phai tra la: " << tong << endl;
+		return 0;
+	}
+	else if (km <= 30 && km > 1)
+	{
+		tong = 17000 + (km - 1) * 15000;
+		cout << "Tong so tien phai tra la: " << tong << endl;
+		return 0;
+	}
+	else if (km <= 1 && km > 0)
+	{
+		tong = km * 17000;
+		cout << "So tien phai tra la: " << tong << endl;
+	}
+
+	system("pause");
+	return 0;
+}
