@@ -1,0 +1,45 @@
+#include<iostream>
+using namespace std;
+
+void nhapMang(int n, int a[])
+	{
+		for (int i = 0; i < n; i++)
+		{
+			cout << "Nhap vao phan tu thu " << i << " la: ";
+			cin >> a[i];
+		}
+	}
+
+int kiemTra(int n, int a[])
+{
+	int flag = 0;
+	for (int i = 0; i < n; i++)
+	{
+		if (a[i] % 2 != 0 && a[i] > 100)
+		{
+			flag = 1;
+		}
+	}
+	return flag;
+}
+
+int main()
+{
+	int n, a[1000];
+	cout << "Nhap vao so luong phan tu cua mang: ";
+	cin >> n;
+
+	nhapMang(n, a);
+	kiemTra(n, a);
+
+	if (kiemTra(n,a) == 1)
+	{
+		cout << "Mang co phan tu le lon hon 100." << endl;
+	}
+	if (kiemTra(n,a) == 0)
+	{
+		cout << "Mang khong co phan tu le lon hon 100."<<endl;
+	}
+	system("pause");
+	return 0;
+}
