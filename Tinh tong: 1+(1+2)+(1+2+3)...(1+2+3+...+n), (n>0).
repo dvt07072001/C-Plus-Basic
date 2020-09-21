@@ -1,0 +1,25 @@
+#include<iostream>	//BAI09: Tinh tong: 1+(1+2)+(1+2+3)...(1+2+3+...+n), (n>0).
+using namespace std;
+int Tinhtong(int n)
+{
+	int TONG = 0, tong = 0;
+	for (int i = 1; i <= n; i++)
+	{
+		tong = tong + i;
+		TONG = TONG + tong;
+	}
+	return TONG;
+}
+
+int main()
+{
+	int n;
+	do
+	{
+		cout << "Nhap vao so nguyen n: ";
+		cin >> n;
+	} while (n <= 0);
+	cout << "Ket qua la: " << Tinhtong(n) << endl;
+	system("pause");
+	return 0;
+}
