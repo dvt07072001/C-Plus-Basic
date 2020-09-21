@@ -1,0 +1,35 @@
+#include<iostream>	//Bai01: Nhap, xuat thong tin cua sinh vien.
+#include<string>
+#include<iomanip>
+using namespace std;
+int main()
+{
+	string hoTen, MSSV, lop, SDT, gioiTinh;
+
+	cout << "Nhap vao Ho Ten sinh vien: ";
+	getline(cin, hoTen);
+
+	cout << "Nhap vao ma so sinh vien: ";
+	getline(cin, MSSV);
+
+	cout << "Nhap vao lop: ";
+	getline(cin, lop);
+
+	cout << "Nhap vao so dien thoai: ";
+	getline(cin, SDT);
+
+	cout << "Nhap vao gioi tinh: ";
+	getline(cin, gioiTinh);
+
+	cout <<endl<< "****THANH VIEN LOP " << lop << "****" << endl;
+	cout << "Ho ten: " << hoTen << endl;
+	cout << "Ma so sinh vien: " << MSSV << endl;
+	cout << "Lop: " << lop<<endl;
+	cout << "So dien thoai: " << SDT;
+	cout << setw(40) << right << "Gioi tinh: "<<gioiTinh<<endl;
+	cout << setfill('*');
+	cout << setw(70) << "*" << endl;
+
+	system("pause");
+	return 0;
+}
