@@ -1,0 +1,40 @@
+#include<iostream>	//Bai08: Nhap vao gio,phut,giay kiem tra co hop le khong,xuat ra man hinh.
+using namespace std;
+int main()
+{
+	int gio, phut, giay;
+	do
+	{
+		cout << "Nhap vao gio: ";
+		cin >> gio;
+		if (gio < 0 || gio>23)
+		{
+			cout << "Gio khong hop le, yeu cau nhap vao gio tu 0 den duoi 24.";
+		}
+	} while (gio < 0 || gio>23);
+
+	do
+	{
+		cout << "Nhap vao phut: ";
+		cin >> phut;
+		if (phut < 0 ||phut>60)
+		{
+			cout << "Phut khong hop le, yeu cau nhap vao phut lon hon 0 va nho hon 60.";
+		}
+	} while (phut < 0 || phut>60);
+
+	do
+	{
+		cout << "Nhap vao giay: ";
+		cin >> giay;
+		if (giay < 0 || giay>60)
+		{
+			cout << "Giay khong hop le, yeu cau nhap vao giay lon hon 0 va nho hon 60.";
+		}
+	} while (giay < 0 || giay>60);
+
+	cout << "    "<<gio << " gio, " << phut << " phut, " << giay << " giay. "<<endl;
+
+	system("pause");
+	return 0;
+}
