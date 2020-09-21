@@ -1,0 +1,21 @@
+#include<iostream>	//BAI05: Nhap vao so giay, xuat ra man hinh gio, phut, giay.
+#include<iomanip>
+using namespace std;
+int main()
+{
+	int giay, gio, phut, tongGiay = 0;
+
+	cout << "Nhap vao tong so giay: ";
+	cin >> tongGiay;
+
+	gio = (tongGiay / 3600);
+	phut = (tongGiay % 3600) / 60;
+	giay = tongGiay - (gio * 3600) - (phut * 60);
+
+	cout << setfill('_');
+	cout << setw(50) << "_"<<endl;
+	cout << "So gio cua " << tongGiay << " giay la: " << gio << " gio " << phut << " phut " << giay << " giay." << endl;
+
+	system("pause");
+	return 0;
+}
