@@ -1,0 +1,49 @@
+#include<iostream>
+using namespace std;
+void kiemTra(int n, int &dem1,int &dem2,int &dem)
+{
+	int m;
+	while (n > 0)
+	{
+		m = n % 10;
+		if (m % 2 == 0)
+		{
+			dem1++;
+		}
+		if( m % 2 !=0)
+		{
+			dem2++;
+		}
+		dem++;
+		n = n / 10;
+	}
+}
+int main()
+{
+	int n,dem1=0,dem2=0,dem=0;
+	do
+	{
+		cout << "Nhao vao so nguyen duong n: ";
+		cin >> n;
+		if (n <= 0)
+		{
+			cout << "Khong hop le, yeu cau nhap vao so nguyen lon hon 0." << endl;
+		}
+	} while (n <= 0);
+
+	kiemTra(n, dem1, dem2, dem);
+	if (dem1 == dem)
+	{
+		cout << "So nguyen co cac chu so toan so chan." << endl;
+	}
+	if (dem2 == dem)
+	{
+		cout << "So nguyen co cac chu so toan la so le." << endl;
+	}
+	else
+	{
+		cout << "Cac chu so cua so nguyen khong toan chan, toan le." << endl;
+	}
+	system("pause");
+	return 0;
+}
