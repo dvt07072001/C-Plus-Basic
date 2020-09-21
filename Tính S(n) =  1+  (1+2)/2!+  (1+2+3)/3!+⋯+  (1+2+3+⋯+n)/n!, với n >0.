@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int n, giaiThua = 1,m=0;
+	float tong = 1;
+	do
+	{
+		cout << "Nhap vao so nguyen duong: ";
+		cin >> n;
+		if (n < 0)
+		{
+			cout << "So nguyen khong hop le, yeu cau nhap vao so nguyen lon hon 0." << endl;
+		}
+	} while (n < 0);
+
+	for (int i = 2; i <= n; i++)
+	{
+			m = m + i;
+		giaiThua = giaiThua * i;
+		tong = tong + ((m+1) / float(giaiThua));
+	}
+
+	cout << "Ket qua cua phep toan la: " << tong << endl;
+	system("pause");
+	return 0;
+}
