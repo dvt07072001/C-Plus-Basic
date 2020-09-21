@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+int tongTich(int n)
+{
+	int tong = 1;
+	for (int i = 1; i <= n;i++)
+	{
+		tong = tong * (2*i+1);
+	}
+	return tong;
+}
+int main()
+{
+	int n;
+	do
+	{
+		cout << "Nhap vao so nguyen n: ";
+		cin >> n;
+		if (n <= 0)
+		{
+			cout << "Khong hop le, yeu cau nhap vao so nguyen lon hon 0." << endl;
+		}
+	} while (n <= 0);
+	cout << "Tong cac tich tu 1 den " << "2 * "<< n <<" + 1 "<< " la: " << tongTich(n)<<endl;
+	system("pause");
+	return 0;
+}
