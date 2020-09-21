@@ -1,0 +1,79 @@
+#include<iostream>
+using namespace std;
+void doc(int n)
+{
+	int hangTram = n / 100;
+	int hangChuc= (n % 100) / 10;
+	int hangDonVi = (n % 100) % 10;
+
+	if (n == 0)
+	{
+		cout << "Khong" << endl;
+	}
+
+	switch (hangTram)
+	{
+	case 1: cout << "Mot tram "; break;
+	case 2: cout << "Hai tram "; break;
+	case 3: cout << "Ba tram "; break;
+	case 4: cout << "Bon tram "; break;
+	case 5: cout << "Nam tram "; break;
+	case 6: cout << "Sau tram "; break;
+	case 7: cout << "Bay tram "; break;
+	case 8: cout << "Tam tram "; break;
+	case 9: cout << "Chin tram "; break;
+	default: break;
+	}
+
+	switch (hangChuc)
+	{
+	case 0: cout << "le "; break;
+	case 1: cout << "Muoi "; break;
+	case 2: cout << "Hai muoi "; break;
+	case 3: cout << "Ba muoi "; break;
+	case 4: cout << "Bon muoi "; break;
+	case 5: cout << "Nam muoi "; break;
+	case 6: cout << "Sau muoi "; break;
+	case 7: cout << "Bay muoi "; break;
+	case 8: cout << "Tam muoi "; break;
+	case 9: cout << "Chin muoi "; break;
+	default: break;
+	}
+
+	switch (hangDonVi)
+	{
+	case 1: cout << "Mot" << endl; break;
+	case 2: cout << "Hai " << endl; break;
+	case 3: cout << "Ba " << endl; break;
+	case 4: cout << "Bon" << endl; break;
+	case 5: cout << "Nam" << endl; break;
+	case 6: cout << "Sau" << endl; break;
+	case 7: cout << "Bay" << endl; break;
+	case 8: cout << "Tam" << endl; break;
+	case 9: cout << "Chin" << endl; break;
+	default: break;
+	}
+	
+
+}
+
+int main()
+{
+	int n;
+
+	do
+	{
+		cout << "Nhap vao so nguyen n: ";
+		cin >> n;
+		if (n < 0)
+		{
+			cout << "So nguyen khong hop le, yeu cau nhap vao so nguyen lon hon 0." << endl;
+		}
+	} while (n < 0);
+
+	cout << "So nguyen duoc doc la: ";
+	doc(n);
+
+	system("pause");
+	return 0;
+}
