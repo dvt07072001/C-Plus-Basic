@@ -1,0 +1,52 @@
+#include<iostream>
+using namespace std;
+int a[1000];
+
+void nhapMang(int n, int a[])
+{
+	for (int i = 0; i < n; i++)
+	{
+		cout << "Nhap vao phan tu thu " << i << " la: ";
+		cin >> a[i];
+	}
+}
+
+void xuatMang(int n, int a[])
+{
+	for (int i = 0; i < n; i++)
+	{
+		cout << a[i] << "\t";
+	}
+}
+
+void xoaPhanTu(int& n, int a[],int viTriCanXoa)
+{
+	for (int i = viTriCanXoa; i < n; i++)
+	{
+		a[i] = a[i + 1];
+	}
+	n--;
+}
+
+int main()
+{
+	int n,viTriCanXoa;
+	cout << "Nhap vao so luong phan tu cua mang: ";
+	cin >> n;
+
+	nhapMang(n, a);
+	cout << "\nCac phan tu cua mang la: ";
+	xuatMang(n, a);
+	cout << endl;
+
+	cout << "Nhap vao vao vi tri can xoa: ";
+	cin >> viTriCanXoa;
+
+	xoaPhanTu(n, a,viTriCanXoa);
+	cout << "Mang sau khi xoa phan tu tai vi tri "<< viTriCanXoa<<" la: " << endl;
+	xuatMang(n, a);
+	cout << endl;
+
+	system("pause");
+	return 0;
+}
