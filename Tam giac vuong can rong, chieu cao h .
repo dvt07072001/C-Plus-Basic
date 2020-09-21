@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int h;
+	do
+	{
+		cout << "Nhap vao chieu cao cua tam giac vuong can: ";
+		cin >> h;
+		if (h <= 0)
+		{
+			cout << "So nguyen khong hop le, yeu cau nhap vao so nguyen lon hon 0." << endl;
+		}
+	} while (h <= 0);
+
+	for (int i = 1; i <= h; i++)
+	{
+		for (int j = 1; j <= i; j++)
+		{
+			if (i == 1 || i == h || j == 1 || j == i)
+			{
+				cout << "* ";
+			}
+			else
+			{
+				cout << "  ";
+			}
+		}
+		cout << endl;
+	}
+}
