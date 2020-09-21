@@ -1,0 +1,25 @@
+#include<iostream>	//BAI03: Phep chia lay phan du va phan nguyen cua 2 so nguyen.
+using namespace std;
+int main()
+{
+	int a, b, thuongNguyen;
+	float thuongDu;
+	do
+	{
+		cout << "Nhap vao so nguyen a: ";
+		cin >> a;
+	} while (a <= 0);
+	do
+	{
+		cout << "Nhap vao so nguyen b: ";
+		cin >> b;
+	} while (b <= 0);
+	{
+		thuongNguyen = a / b;
+		thuongDu = a % b;
+	}
+	cout << "Phep chia lay phan du cua hai so nguyen a / b la: " << thuongDu << "." << endl;
+	cout << "Phep chia lay phan nguyen cua hai so nguyen a % b la: " << thuongNguyen << "." << endl;
+	system("pause");
+	return 0;
+}
