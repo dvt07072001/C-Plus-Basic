@@ -1,0 +1,41 @@
+#include<iostream>	//Bai04: Nhap vao so nguyen co 3 chu so, xuat ra man hinh so lon nhat o vi tri nao.
+using namespace std;
+int main()
+{
+	int n,hangTram,hangChuc,hangDonVi,max;
+	do
+	{
+		cout << "Nhap vao so nguyen n: ";
+		cin >> n;
+		if (n <= 100 || n >= 1000)
+			cout << "So nguyen khong hop le, yeu cau nhap vao so nguyen co 3 chu so.";
+	} while (n <= 100 || n >= 1000);
+
+	hangTram = n / 100;
+	hangChuc = (n % 100) / 10;
+	hangDonVi = (n % 100) % 10;
+
+		max = hangTram;
+		if (max == hangTram && hangTram>=hangChuc && hangTram>=hangDonVi)
+		{
+			cout << "Chu so lon nhat o vi tri hang tram: "<< max<<endl;
+			return 0;
+		}
+		if (hangChuc > max)
+		{
+		max = hangChuc;
+		if (hangChuc >= hangDonVi)
+			{
+				cout << "Chu so lon nhat o vi tri hang chuc: "<< max<< endl;
+				return 0;
+			}
+		}
+		if (hangDonVi > max)
+		{
+			max = hangDonVi;
+		}
+
+	cout << "Chu so lon nhat o hang don vi: "<< max << endl;
+	system("pause");
+	return 0;
+}
