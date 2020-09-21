@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int h;
+	do
+	{
+		cout << "Nhap vao chieu cao h: ";
+		cin >> h;
+		if(h<=0)
+		{
+			cout << "So nguyen khong hop le, yeu cau nhap vao so nugyen lon hon 0" << endl;
+
+		}
+	} while (h <= 0);
+
+		for (int i=1; i <= h; i++)
+		{
+			for (int j = 1; j <= h - i; j++)
+				cout << "   ";
+			for (int j = h - i + 1; j <= h + i - 1; j++)
+				cout << " * ";
+			cout << endl;
+		}
+		return 0;
+}
+
+
+
