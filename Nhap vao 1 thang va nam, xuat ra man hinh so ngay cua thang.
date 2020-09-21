@@ -1,0 +1,58 @@
+#include<iostream>  //Bai07: Nhap vao 1 thang va nam, xuat ra man hinh so ngay cua thang.
+using namespace std;
+int nam;
+bool namNhuan(int nam)
+{
+    if (nam % 400 == 0)
+        return true;
+    if (nam % 4 == 0 && nam % 100 != 0)
+        return true;
+    else
+        return false;
+}
+int main() {
+    int thang, nam;
+    do
+    {
+        cout << "Nhap vao thang: ";
+        cin >> thang;
+        if (thang <= 0 || thang > 12)
+            cout << "Yeu cau nhap lai,thang phai lon hon 0 va nho hon 13." << endl;
+    } while (thang <= 0 || thang > 12);
+    do
+    {
+        cout << "Nhap vao nam: ";
+        cin >> nam;
+        if (nam <= 0)
+            cout << "Yeu cau nhap lai, nam phai lon hon 0." << endl;
+    } while (nam <= 0);
+
+    {
+        switch (thang)
+        {
+        case 1:cout << "" << thang << " co 31 ngay" << endl; break;
+        case 2:
+            if (namNhuan(nam) == true)
+            {
+                cout << "Thang" << thang << "co 29 ngay" << endl; break;
+            }
+            else
+            {
+                cout << " Thang " << thang << " co 28 ngay" << endl; break;
+            }
+        case 3:cout << "Thang " << thang << " co 31 ngay" << endl; break;
+        case 4:cout << "Thang " << thang << " co 30 ngay" << endl; break;
+        case 5:cout << "Thang " << thang << " co 31 ngay" << endl; break;
+        case 6:cout << "Thang " << thang << " co 30 ngay" << endl; break;
+        case 7:cout << "Thang " << thang << " co 31 ngay" << endl; break;
+        case 8:cout << "Thang " << thang << " co 31 ngay" << endl; break;
+        case 9:cout << "Thang " << thang << " co 30 ngay" << endl; break;
+        case 10:cout << "Thang " << thang << " co 31 ngay" << endl; break;
+        case 11:cout << "Thang " << thang << " co 30 ngay" << endl; break;
+        case 12:cout << "Thang " << thang << " co 31 ngay" << endl; break;
+        default:; break;
+        }
+    }
+    system("pause");
+    return 0;
+}
