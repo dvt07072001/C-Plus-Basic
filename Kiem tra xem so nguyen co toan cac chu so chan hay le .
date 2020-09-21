@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	unsigned int n, tong = 0, bienPhu, diem = 0,m=0;
+	do
+	{
+		cout << "Nhap vao so nguyen duong: ";
+		cin >> n;
+		bienPhu = n;
+		if (n <= 0)
+		{
+			cout << "So nguyen khong hop le, yeu cau nhap lai so nguyen lon hon 0." << endl;
+		}
+	} while (n <= 0);
+
+	while (bienPhu != 0)
+	{
+		tong = bienPhu % 10;
+
+		if (tong != 0)
+		{
+			m++;
+		}
+		if (tong % 2 == 0)
+		{
+			diem++;
+		}
+		bienPhu = bienPhu / 10;
+	}
+	if (m == diem)
+	{
+		cout << "So nguyen duong " << n << " la so co toan chu so chan" << endl;
+	}
+	else
+	{
+		cout << "So nguyen duong " << n << " khong la so co toan chu so chan" << endl;
+	}
+
+	system("pause");
+	return 0;
+}
