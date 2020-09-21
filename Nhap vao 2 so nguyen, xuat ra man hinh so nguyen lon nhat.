@@ -1,0 +1,16 @@
+#include<iostream>	//Bai01: Nhap vao 2 so nguyen, xuat ra man hinh so nguyen lon nhat.
+using namespace std;
+int main()
+{
+	int a, b;
+	cout << "Nhap vao so nguyen a: ";
+	cin >> a;
+	cout << "Nhap vao so nguyen b: ";
+	cin >> b;
+	if (a > b)
+		cout << "So nguyen lon nhat la: " << a << endl;
+	else
+		cout << "So nguyen lon nhat la: " << b << endl;
+	system("pause");
+	return 0;
+}
