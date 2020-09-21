@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int n,tich=1;
+	do
+	{
+		cout << "Nhap vao so nguyen n: ";
+		cin >> n;
+		if (n < 0)
+		{
+			cout << "So nguyen khong hop le, yeu cau nhap vao so nguyen lon hon -1" << endl;
+		}
+	} while (n < 0);
+
+	for (int i = 1; i <= ((2*n)+1);i=i+2)
+	{
+		tich = tich * i;
+	}
+	cout << "Tich cac so nguyen la: " << tich << endl;
+	system("pause");
+	return 0;
+}
