@@ -1,0 +1,28 @@
+#include<iostream>	//BAI01: Tinh tong,hieu,tich,thuong cua 2 so nguyen.
+using namespace std;
+int main()
+{
+	int a, b;
+	cout << "Nhap vao so nguyen a: ";
+	cin >> a;
+	cout << "nhap vao so nguyen b: ";
+	cin >> b;
+	float TONG, HIEU, THUONG, TICH;
+	TONG = a + b;
+	HIEU = a - b;
+	TICH = a * b;
+	if (b == 0)
+	{
+		cout << "Thuong cua hai so nguyen a / b khong hop le. " << endl;
+	}
+	else
+	{
+		THUONG = float(a) / float(b);
+		cout << "Thuong cua hai so nguyen a / b la: " << THUONG << endl;
+	}
+	cout << "Tong cua hai so nguyen a + b la: " << TONG << endl;
+	cout << "Hieu cua hai so nguyen a - b la: " << HIEU << endl;
+	cout << "Tich cua hai so nguyen a * b la: " << TICH << endl;
+	system("pause");
+	return 0;
+}
