@@ -1,0 +1,21 @@
+#include<iostream>	//Bai02: Nhap vao 3 so nguyen, xuat ra man hinh so nguyen nho nhat.
+using namespace std;
+int main()
+{
+	int a, b, c, min;
+	cout << "Nhap vao so nguyen a: ";
+	cin >> a;
+	cout << "Nhap vao so nguyen b:";
+	cin >> b;
+	cout << "Nhap vao so nguyen c: ";
+	cin >> c;
+	min = a;
+	if (b < min)
+		min = b;
+	if (c < min)
+		min = c;
+	cout << "So nguyen nho nhat la: " << min << endl;
+	system("pause");
+	return 0;
+
+}
