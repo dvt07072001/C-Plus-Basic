@@ -1,0 +1,40 @@
+#include<iostream>	//Bai08: Kiem tra so nguyen to.
+#include<math.h>
+using namespace std;
+bool kiemTra(int n)
+{
+	if (n < 2)
+		return false;
+	for (int i = 2; i <= sqrt(n); i++)
+	{
+		if (n % i == 0)
+		{
+			return false;
+		}
+	}
+	return true;
+}
+int main()
+{
+	int n,phu;
+	do
+	{
+		cout << "Nhap vao so nguyen n: ";
+		cin >> n;
+		if (n <= 0)
+		{
+			cout << "So nguyen khong hop le, yeu cau nhap vao so nguyen lon hon 1." << endl;
+		}
+	} while (n <=0);
+	
+	if (kiemTra(n) == false)
+	{
+		cout << "So nguyen "<<n<<" khong phai la so nguyen to." << endl;
+	}
+	else
+	{
+		cout << "So nguyen "<<n<<" la so nguyen to." << endl;
+	}
+	system("pause");
+	return 0;
+}
