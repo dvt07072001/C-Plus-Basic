@@ -1,0 +1,43 @@
+#include<iostream>
+using namespace std;
+bool kiemTra(int n)
+{
+	for (int i = 1; i < n; i++)
+	{
+		if (i * i == n)
+		{
+			return true;
+		}
+	}
+	return false;
+}
+int main()
+{
+
+	int n,dem=0;
+	do
+	{
+		cout << "Nhap vao so nguyen n: ";
+		cin >> n;
+		if (n <= 0)
+		{
+			cout << "So nguyen khong hop le, yeu cau nhap vao so nguyen lon hon 0." << endl;
+		}
+	} while (n <= 0);
+
+	kiemTra(n);
+	cout << n << " So chinh phuong dau la: "<<endl;
+	for (int i = 1; ; i++)
+	{
+		if (kiemTra(i) == true)
+		{
+			cout << i<<" ";
+			dem++;
+		}
+		if (dem == n)
+			break;
+	}
+	
+	system("pause");
+	return 0;
+}
