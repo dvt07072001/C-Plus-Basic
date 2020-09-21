@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+int dem(int n)
+{
+	int dem = 0;
+	while (n > 0)
+	{
+		n = n / 10;
+		dem++;
+	}
+	return dem;
+}
+int main()
+{
+	int n;
+	do
+	{
+		cout << "Nhap vao so nguyen n: ";
+		cin >> n;
+		if (n <= 0 )
+		{
+			cout << "So nguyen khong hop le, yeu cau nhap vao so nguyen lon hon 0." << endl;
+		}
+	} while (n <= 0);
+	cout << "So cac chu so cua so nguyen n la: ";
+	cout << dem(n)<<endl;
+	system("pause");
+	return 0;
+}
