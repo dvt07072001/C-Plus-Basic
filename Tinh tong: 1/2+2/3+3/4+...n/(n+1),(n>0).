@@ -1,0 +1,23 @@
+#include<iostream>	//BAI10: Tinh tong: 1/2+2/3+3/4+...n/(n+1),(n>0).
+using namespace std;
+float Tinhtong(int n)
+{
+	float tong = 0;
+	for (int i = 1; i <= n; i++)
+	{
+		tong = tong + float(i) / (i + 1);
+	}
+	return tong;
+}
+int main()
+{
+	int n;
+	do
+	{
+		cout << "Nhap vao so nguyen n: ";
+		cin >> n;
+	} while (n <= 0);
+	cout << "Ket qua la: " << Tinhtong(n) << endl;
+	system("pause");
+	return 0;
+}
