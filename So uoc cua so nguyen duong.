@@ -1,0 +1,26 @@
+#include<iostream>	//Bai01: So uoc cua so nguyen duong.
+using namespace std;
+int main()
+{
+	int n;
+	do
+	{
+		cout << "Nhap vao so nguyen duong: ";
+		cin >> n;
+		if (n <= 0)
+		{
+			cout << "So nguyen khong hop le, yeu cau nhap vao so nguyen lon hon 0." << endl;
+		}
+	} while (n <= 0);
+	cout << "So uoc cua so nguyen duong la: ";
+	for (int i = 1; i <= n; i++)
+	{
+		if (n % i == 0)
+		{
+			cout << i << " ";
+		}
+	}
+	cout << endl;
+	system("pause");
+	return 0;
+}
