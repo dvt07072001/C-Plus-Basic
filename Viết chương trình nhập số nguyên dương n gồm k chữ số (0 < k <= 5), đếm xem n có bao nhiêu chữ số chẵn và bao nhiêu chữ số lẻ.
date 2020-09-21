@@ -1,0 +1,39 @@
+#include<iostream>
+using namespace std;
+void dem(int n, int &dem1, int &dem2)
+{
+	int m;
+	while (n > 0)
+	{
+		m = n % 10;
+		if (m % 2 == 0)
+		{
+			dem1++;
+		}
+		dem2++;
+		n = n / 10;
+	}
+}
+int main()
+{
+	int n,dem1=0,dem2=0;
+	do
+	{
+		cout << "Nhap vao so nguyen n: ";
+		cin >> n;
+		if (n <= 0)
+		{
+			cout << "So nguyen khong hop le, yeu cau nhap vao so nguyen lon hon 0." << endl;
+		}
+	} while (n <= 0);
+
+	dem( n, dem1, dem2);
+
+	cout << "So cac chu so chan cua so nguyen n la: ";
+	cout << dem1 << endl;
+
+	cout << "So cac chu so le cua so nguyen n la: ";
+	cout << (dem2-dem1) << endl;
+	system("pause");
+	return 0;
+}
