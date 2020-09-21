@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+
+void nhapMang(int n, int a[])
+{
+	for (int i = 0; i < n; i++)
+	{
+		cout << "Nhap vao phan tu thu " << i << " : ";
+		cin >> a[i];
+	}
+}
+
+int tinhTong(int n, int a[])
+{
+	int tong = 0;
+	for (int i = 0; i < n; i++)
+	{
+		tong = tong + a[i];
+	}
+	return tong;
+}
+int main()
+{
+	int n;
+	int a[100];
+	do
+	{
+		cout << "Nhap vap mang co n phan tu: ";
+		cin >> n;
+		if (n <= 0)
+		{
+			cout << "So nguyen khong hop le, yeu cau nhap vao so nguyen lon hon 0." << endl;
+		}
+	} while (n <= 0);
+
+	nhapMang(n, a);
+	cout << "Tong cac phan tu cua mang la: ";
+	cout<< tinhTong(n, a)<<endl;
+
+	system("pause");
+	return 0;
+}
