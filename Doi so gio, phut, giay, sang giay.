@@ -1,0 +1,25 @@
+#include<iostream>	//BAI04: Doi so gio, phut, giay, sang giay.
+#include<iomanip>
+using namespace std;
+int main()
+{
+	int gio, phut, giay,tong;
+
+	cout << "Nhap vap so gio: ";
+	cin >> gio;
+
+	cout << "Nhap vao so phut: ";
+	cin >> phut;
+
+	cout << "Nhap vao so giay: ";
+	cin >> giay;
+
+	tong = giay + (phut * 60) + (gio * 60) * 60;
+
+	cout << setfill('_');
+	cout << setw(50) << "_" << endl;
+	cout << "Tong so giay cua "<<gio<<" gio "<< phut<<" phut "<<giay<<" giay "<< "la: "<<tong<<" giay. "<<endl;
+
+	system("pause");
+	return 0;
+}
